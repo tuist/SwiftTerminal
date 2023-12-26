@@ -18,7 +18,7 @@ jobs:
         os: [ubuntu-latest, macos-13]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: jdx/rtx-action@v1
         with:
           experimental: true
@@ -29,7 +29,7 @@ jobs:
     name: "Tuist build"
     runs-on: "macos-13"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_$(cat .xcode-version).app
       - uses: jdx/rtx-action@v1
@@ -47,7 +47,7 @@ jobs:
         os: [ubuntu-latest, macos-13]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: jdx/rtx-action@v1
         with:
           experimental: true
@@ -58,7 +58,7 @@ jobs:
     name: "Tuist test"
     runs-on: "macos-13"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_$(cat .xcode-version).app
       - uses: jdx/rtx-action@v1
@@ -73,7 +73,7 @@ jobs:
     name: Lint
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: jdx/rtx-action@v1
         with:
           experimental: true
@@ -84,7 +84,7 @@ jobs:
     name: Lint lockfiles
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: jdx/rtx-action@v1
         with:
           experimental: true
